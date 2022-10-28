@@ -6,7 +6,7 @@
 /*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 15:42:52 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/28 02:32:10 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/10/28 09:20:29 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_itoa(int n)
 	size = counter(nb);
 	str = malloc(size + 1);
 	if (!str)
-		return (0);
+		return (NULL);
 	str[size] = '\0';
 	while (size > 0)
 	{

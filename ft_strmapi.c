@@ -6,7 +6,7 @@
 /*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 04:36:08 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/28 05:05:58 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/10/28 09:17:47 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,19 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int i;
+	char			*str;
+	unsigned int	n;
+	unsigned int	i;
 
-	i = 0;	
+	if (!s)
+		return (NULL);
+	n = ft_strlen(s);
+	i = -1;
+	str = malloc(n + 1);
 	if (!str)
-		return ;
-	while (*str)
-		f(i++, &(str++));
+		return (NULL);
+	while (n > ++i)
+		str[i] = f(i, s[i]);
+	str[i] = '\0';
+	return (str);
 }

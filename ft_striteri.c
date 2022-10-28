@@ -6,7 +6,7 @@
 /*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 05:06:55 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/28 05:12:11 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/10/28 09:32:29 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,11 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	i;
+	int	i;
 
-	i = 0;
-	if (!str)
+	if (!s)
 		return ;
-	while (*str)
-		f(i++, &(str++));
-}
-
-void	ft_striteri(char *str, void (*f)(unsigned int, char*))
-{
-	size_t	n;
-
-	if (!str)
-		return ;
-	n = ft_strlen(str);
-	while (n-- > 0)
-		f(n, &str[n]);
+	i = -1;
+	while (s[++i])
+		f(i, &s[i]);
 }
