@@ -3,45 +3,62 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 14:59:25 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/27 20:34:38 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/10/29 02:36:05 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*int	len(char const *str, char c, int start)
+/*static int wordcount(const char *s, char c)
 {
-	while (str[start] != c)
-	{
-		start++;
-	}
-	return (start);
-}
-
-char **ft_split(char const *s, char c)
-{
-	int start;
-	char **str;
-
-	*str = "a";
-	start = 0;
-	while (*(s + start))
+	int i;
+	while (*s)
 	{
 		if (ft_strchr(s, c) != NULL)
-		{
-			start++;
-		}
-		else if (ft_strchr(s, c) == NULL)
-		{
-			*str = ft_substr(s, start, (size_t) len(s, c, start));
-			start++;
-		}
+			s++;
 		else
-			return (0);
+			i++;
 	}
-	return(str);
+	return (i);
 }
-*/
+
+char	**ft_split(char const *s, char c)
+{
+	int		i;
+	int		j;
+	int		size;
+	char	**strings;
+
+	i = 0;
+	size = 0;
+	strings = NULL;
+	while (*s)
+	{
+		if (ft_strchr(s, c) != NULL)
+			i++;
+		else
+		{
+			while (ft_strchr(s, c) == NULL)
+			{
+				size++;
+				s++;
+			}
+			strings = ft_substr(s, i, size);
+			j++;
+		}
+		s++;
+	}
+	return (strings);
+}
+
+#include <stdio.h>
+
+int main()
+{
+	char c = '-';
+	char *s = "-diogo-";
+	printf("wordcount = %d", wordcount(s, c));
+}*/
