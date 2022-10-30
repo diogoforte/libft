@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 15:42:52 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/28 09:20:29 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/10/30 05:31:11 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,17 @@ char	*ft_itoa(int n)
 	if (str[0] == '0')
 		str[0] = '-';
 	if (n == 0)
-		str = "0";
+		str[0] = '0';
 	return (str);
 }
-
-/* #include <stdio.h>
+/*
+#include <stdio.h>
 
 int main()
 {
-	int i = -2147483648;
+	int i = 0;
+	char *toa = ft_itoa(0);
 	printf("counter : %d\n", counter(i));
-	printf("itoa :%s\n", ft_itoa(i));
-} */
+	printf("itoa :%s\n", toa);
+	free(toa);
+}*/
