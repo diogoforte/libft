@@ -6,7 +6,7 @@
 /*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 17:52:29 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/30 05:39:45 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/10/31 01:37:36 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 char	*ft_strchr(const char *str, int c)
 {
+	if (c > 127)
+		return ((char *) str);
 	while (*str)
 	{
 		if (*str == c)
@@ -29,7 +31,7 @@ char	*ft_strchr(const char *str, int c)
 
 int main()
 {
-	const char *str = "teste";
+	const char *str = "tripouille";
 	int c = '\0';
-	printf("%s", ft_strchr(str, 'e'));
+	printf("%s", ft_strchr(str, 't' + 256));
 } */

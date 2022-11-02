@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 07:34:43 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/14 13:21:05 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/10/31 01:45:36 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
+
+/* #include <stdio.h>
+
+int main()
+{
+	printf("%s", ft_strnstr("", "", -1));
+} */
