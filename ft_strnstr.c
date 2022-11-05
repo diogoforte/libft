@@ -6,7 +6,7 @@
 /*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 07:34:43 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/31 01:45:36 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/05 18:08:14 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,26 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	size_t	size;
 
-	i = 0;
-	while (big[i])
-	{
-		j = 0;
-		while ((i + j) < len && little[j] == big[i + j])
+	if (!len && little[0])
+		return (NULL);
+	i = -1;
+	size = ft_strlen(little);
+	if (ft_strlen(big) >= size && len >= size)
+	{	
+		while (++i <= len - size)
 		{
-			if (big[i + j] == '\0' && little[j] == '\0')
-				return ((char *) &big[i]);
-			j++;
+			if (!ft_strncmp(&big[i], little, size))
+				return ((char *)&big[i]);
 		}
-		if (little[j] == '\0')
-			return ((char *)big + i);
-		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 /* #include <stdio.h>
 
 int main()
 {
-	printf("%s", ft_strnstr("", "", -1));
+	printf("%s", ft_strnstr("", "", 0));
 } */

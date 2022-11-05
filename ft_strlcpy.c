@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 12:17:23 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/13 13:24:23 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/05 18:55:15 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
-	if (size != '\0')
+	if (size != 0)
 	{
 		while (src[i] != '\0' && i < (size - 1))
 		{

@@ -6,7 +6,7 @@
 /*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 12:27:29 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/11/03 13:00:28 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/05 21:02:52 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst || !f)
+	if (!lst)
 		return ;
-	while (lst->next)
+	while (lst)
 	{
 		f(lst->content);
 		lst = lst->next;

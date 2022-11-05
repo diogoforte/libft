@@ -6,7 +6,7 @@
 /*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 12:30:02 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/11/03 12:53:12 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/05 23:04:10 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,18 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*temp;
-	t_list	*head;
+	t_list	*newnode;
+	t_list	*lista;
 
-	head = NULL;
+	lista = NULL;
 	while (lst)
 	{
-		temp = ft_lstnew(f(lst->content));
-		if (!temp)
-			ft_lstdelone(lst, del);
-		ft_lstadd_back(&head, temp);
+		newnode = ft_lstnew(f(lst->content));
+		if (!newnode)
+			del(newnode);
+		else
+			ft_lstadd_back(&lista, newnode);
 		lst = lst->next;
 	}
-	return (head);
+	return (lista);
 }
