@@ -3,14 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 05:45:04 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/13 18:19:54 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/06 06:07:11 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+Description:
+	Memcpy copies n characters from memory area src to memory area dest.
+Return Value:
+	Returns a pointer to destination.
+*/
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -30,14 +37,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*int main ()
-{
-   const char src[] = "dinunes-";
-   char dest[] = "Diogo";
-   printf("Before memcpy dest = %s\n", dest);
-   ft_memcpy(dest, src, strlen(src)+1);
-   printf("After memcpy dest = %s\n", dest);
-   
-   return(0);
-}*/

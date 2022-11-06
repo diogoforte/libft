@@ -6,11 +6,21 @@
 /*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 07:34:43 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/11/05 18:08:14 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/06 06:31:39 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+Description:
+	locates the first instance of str little on str big on the
+	first n bytes of big.
+Return Value:
+	pointer to the first instance of needle in haystack if found.
+ 	NULL if not found.
+ 	pointer to haystack if needle is empty.
+*/
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -31,10 +41,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-/* #include <stdio.h>
-
-int main()
-{
-	printf("%s", ft_strnstr("", "", 0));
-} */

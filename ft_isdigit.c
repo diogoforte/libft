@@ -3,14 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 23:35:23 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/13 18:19:49 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/06 05:57:11 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+Description:
+	Isdigit checks if the passed character is a digit.
+Return Value:
+	Returns 1 if (a) is a digit or a letter, else it returns 0.	
+*/
 
 int	ft_isdigit(int a)
 {
@@ -19,16 +26,3 @@ int	ft_isdigit(int a)
 	else
 		return (0);
 }
-
-/*int main()
-{
-	char c; 
-
-	c = 57;
-	if (ft_isdigit(c) == 0)
-		 printf("%c is not a digit.\n", c);
-	else
-		 printf("%c is a digit.\n", c);
-
-	return 0;
-}*/

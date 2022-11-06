@@ -3,14 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 04:36:08 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/28 09:17:47 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/06 06:29:08 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+Description:
+	Applies the function ’f’ to each character of the
+	string ’s’, and passing its index as first argument
+	to create a new string (with malloc(3)) resulting
+	from successive applications of ’f’.
+Return Value:
+	The string created from the successive applications of ’f’.
+	Returns NULL if the allocation fails.
+*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

@@ -3,14 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 23:36:14 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/26 20:11:55 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/06 05:57:01 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+Description:
+	Isprint checks if the passed character is printable.
+Return Value:
+	Returns 1 if (a) is a digit or a letter, else it returns 0.	
+*/
 
 int	ft_isprint(int a)
 {
@@ -19,16 +26,3 @@ int	ft_isprint(int a)
 	else
 		return (0);
 }
-
-/*int main()
-{
-	char c; 
-
-	c = 57;
-	if (ft_isprint(c) == 0)
-		 printf("%c is not printable.\n", c);
-	else
-		 printf("%c is a printable.\n", c);
-
-	return 0;
-}*/

@@ -6,11 +6,19 @@
 /*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 12:17:23 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/11/05 18:55:15 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/06 06:43:13 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+Description:
+	copies up to n-1 bytes of src to dest
+	always NULL terminating the result.
+Return Value:
+	size of the string it tried to create.(size of source).
+*/
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
@@ -28,13 +36,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	return (ft_strlen((char *)src));
 }
-
-/*#include <string.h>
-#include <stdio.h>
-int main()
-{
-	char dest[] = "";
-	const char source[] = "dinunes-";
-	printf("return - %zu \n", ft_strlcpy(dest, source, 4));
-	printf("string - %s \n", dest);
-}*/

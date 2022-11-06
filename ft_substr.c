@@ -6,11 +6,20 @@
 /*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 07:39:09 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/30 04:10:34 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/06 06:34:03 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+Description:
+	Allocates (with malloc(3)) and returns a substring from the string ’s’.
+	The substring begins at index ’start’ and is of maximum size ’len’.
+Return Value:
+	The substring.
+	NULL if the allocation fails.
+*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -36,13 +45,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (substring);
 }
-
-/* #include <stdio.h>
-
-int main()
-{
-	char	str[] = "diogo";
-	char	*strsub = ft_substr(str, 0, 5);
-	printf("str		=	%s\n", str);
-	printf("ft_strsub	=	%s\n", strsub);
-} */

@@ -3,14 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 05:27:46 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/27 17:08:15 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/06 06:21:22 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+Description:
+	Strdup() function returns a pointer to a new string which is
+    a duplicate of the string s.  Memory for the new string is
+    allocated with malloc(3).
+Return Value:
+	returns a pointer to the duplicated string.
+	It returns NULL if insufficient memory was available.	 
+*/
 
 char	*ft_strdup(const char *s)
 {
@@ -29,20 +39,3 @@ char	*ft_strdup(const char *s)
 	s2[i] = '\0';
 	return (s2);
 }
-
-/* #include<stdio.h>
-#include<string.h>
-
-int main()
-{
-    char source[] = "GeeksForGeeks";
- 
-    // A copy of source is created dynamically
-    // and pointer to copy is returned.
-    char* target = strdup(source);
-	char* target1 = ft_strdup(source);
- 
-    printf("strdup =	%s\n", target);
-	printf("ft_strdup =	%s\n", target1);
-    return 0;
-} */

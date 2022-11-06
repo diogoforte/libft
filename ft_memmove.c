@@ -3,14 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 14:34:53 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/28 05:49:36 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/06 06:09:04 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+Description:
+	Memmove copies n characters from src to dest, but for
+	overlapping memory blocks.
+Return Value:
+	Returns a pointer to the destination, which is dest.
+*/
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -32,20 +40,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/* #include <stdio.h>
-#include <string.h> 
-
-int main () {
-   char dest[] = "oldstring";
-   const char src[]  = "newstring";
-
-   memmove(dest, src, 8);
-   printf("memmove		| dest = %s, src = %s\n", dest, src);
-
-   char dest1[] = "oldstring";
-   const char src1[]  = "newstring";
-   ft_memmove(dest1, src1, 8);
-   printf("ft_memmove	| dest = %s, src = %s\n", dest, src);
-
-} */

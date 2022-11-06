@@ -6,12 +6,22 @@
 /*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 14:59:25 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/30 05:30:21 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/06 06:16:49 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+
+/* 
+Description:
+	Split allocates (with malloc(3)) and returns an array
+	of strings obtained by splitting ’s’ using the character ’c’
+	as a delimiter. The array must end with a NULL pointer.
+Return Value:
+	The array of new strings resulting from the split.
+	NULL if the allocation fails.
+*/
 
 static int	wdc(char const *s, char c)
 {
@@ -67,14 +77,3 @@ char	**ft_split(const char *str, char c)
 	}
 	return (ret);
 }
-
-/* int main()
-{
-	char *s = "ola ola";
-	char c = ' ';
-	char **teste = ft_split(s, c);
-	for (int i = 0; teste[i]; i++)
-		printf("%s\n", teste[i]);
-	int a = wdc(s, c);
-	printf("wdc = %d\n", a);
-} */

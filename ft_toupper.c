@@ -3,14 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 17:33:45 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/13 17:33:45 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/06 06:35:56 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+Description:
+	passes given char to uppercase if is lowerrcase
+Return Value:
+	uppercase ch if lowercase, ch if not.
+*/
 
 int	ft_toupper(int ch)
 {
@@ -18,12 +25,3 @@ int	ft_toupper(int ch)
 		ch -= 32;
 	return (ch);
 }
-
-/*
-#include <stdio.h>
-
-int main()
-{
-    char a = 'a';
-    printf("%c", ft_toupper(a));
-}*/

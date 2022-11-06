@@ -3,14 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 13:25:37 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/13 14:46:23 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/06 06:26:35 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+Description:
+	Appends src to dest to at most the size of dest -1
+	to ensure its NULL terminated.
+Return Value:
+	size of str it tried t create (len of des + src)
+ 	if n < size of dest n is assumed as len of dest,
+	returning (n + len of  src).
+*/
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
@@ -29,19 +39,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[i + j] = '\0';
 	return (i + ft_strlen((char *)src));
 }
-
-/*#include <string.h>
-#include <stdio.h>
-int main()
-{
-	char dest[] = "dinunes-";
-	char src[] = "@student.42.fr";
-	ft_strlcat(dest, src, 5);
-	printf("Return - %zu \n", ft_strlcat(dest, src, 18));
-	printf("String - %s\n", dest);
-	char dest1[] = "dinunes-";
-	char src1[] = "@student.42.fr";
-	ft_strlcat(dest1, src1, 5);
-	printf("Return - %zu \n", t_strlcat(dest1, src1, 18));
-	printf("String - %s\n", dest1);
-}*/

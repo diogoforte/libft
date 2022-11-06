@@ -3,14 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dinunes- <dinunes-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 01:42:03 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/13 18:20:00 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/06 06:10:42 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+Description:
+	Memset copies the character c to the first n characters of the
+	string pointed to, by the argument str.
+Return Value:
+	Returns a pointer to the memory area str.
+*/
 
 void	*ft_memset(void *str, int c, size_t n)
 {
@@ -26,10 +34,3 @@ void	*ft_memset(void *str, int c, size_t n)
 	}
 	return (str);
 }
-
-/*int main()
-{
-	char str[] = "dinunes-";
-	ft_memset(str, '$', 3);
-	printf("%s", str);
-}*/

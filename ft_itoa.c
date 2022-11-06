@@ -6,11 +6,18 @@
 /*   By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 15:42:52 by dinunes-          #+#    #+#             */
-/*   Updated: 2022/10/30 05:31:11 by dinunes-         ###   ########.fr       */
+/*   Updated: 2022/11/06 06:00:52 by dinunes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+Description:
+	Converts an integer value to a null-terminated string.
+Return Value:
+	Returns str if the allocation was sucessful, else it returns NULL.	
+*/
 
 static int	counter(int n)
 {
@@ -54,14 +61,3 @@ char	*ft_itoa(int n)
 		str[0] = '0';
 	return (str);
 }
-/*
-#include <stdio.h>
-
-int main()
-{
-	int i = 0;
-	char *toa = ft_itoa(0);
-	printf("counter : %d\n", counter(i));
-	printf("itoa :%s\n", toa);
-	free(toa);
-}*/
