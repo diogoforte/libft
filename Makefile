@@ -6,7 +6,7 @@
 #    By: dinunes- <dinunes-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/26 17:59:29 by dinunes-          #+#    #+#              #
-#    Updated: 2022/10/31 22:49:06 by dinunes-         ###   ########.fr        #
+#    Updated: 2022/12/09 15:20:46 by dinunes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,9 +21,9 @@ ft_strjoin ft_strtrim ft_strmapi ft_striteri ft_itoa ft_split\
 BONUS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back\
 ft_lstdelone ft_lstclear ft_lstiter ft_lstmap\
 
-CC =gcc
+CC =cc
 RM =rm -f
-CFLAGS = -Wall -Werror -Wextra -I.
+CFLAGS = -Wall -Werror -Wextra
 
 all:$(NAME)
 
